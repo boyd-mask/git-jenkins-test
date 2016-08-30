@@ -1,0 +1,24 @@
+GitHub pull request #2 of commit 445745f245877dc41a7208c395e9f8b549ef9843, no merge conflicts.
+Setting status of 445745f245877dc41a7208c395e9f8b549ef9843 to PENDING with url http://10.15.247.135:8081/job/Github%20Pull%20Req%20Builder/1/ and message: 'Build started sha1 is merged.'
+ビルドします。 ワークスペース: /usr/local/opt/jenkins/jobs/Github Pull Req Builder/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/boyd-mask/git-jenkins-test/
+ > git init /usr/local/opt/jenkins/jobs/Github Pull Req Builder/workspace # timeout=10
+Fetching upstream changes from https://github.com/boyd-mask/git-jenkins-test/
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/boyd-mask/git-jenkins-test/ +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/boyd-mask/git-jenkins-test/ # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/boyd-mask/git-jenkins-test/ # timeout=10
+Fetching upstream changes from https://github.com/boyd-mask/git-jenkins-test/
+ > git fetch --tags --progress https://github.com/boyd-mask/git-jenkins-test/ +refs/heads/*:refs/remotes/origin/* +refs/pull/*:refs/remotes/origin/pr/*
+ > git rev-parse refs/remotes/origin/pr/2/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/2/merge^{commit} # timeout=10
+Checking out Revision b3d31cef5a6e364bf4988a1f79d4687f526caa41 (refs/remotes/origin/pr/2/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b3d31cef5a6e364bf4988a1f79d4687f526caa41
+First time build. Skipping changelog.
+Setting status of 445745f245877dc41a7208c395e9f8b549ef9843 to SUCCESS with url http://10.15.247.135:8081/job/Github%20Pull%20Req%20Builder/1/ and message: 'YEEEEEEEEESSSSSSSS!
+ '
+Finished: SUCCESS
+
