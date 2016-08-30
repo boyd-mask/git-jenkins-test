@@ -1,0 +1,39 @@
+GitHub pull request #4 of commit 6b7a33d3b34b7913e0dc7b103c95cfdec5189fde, no merge conflicts.
+Setting status of 6b7a33d3b34b7913e0dc7b103c95cfdec5189fde to PENDING with url http://10.15.247.135:8081/job/ghpqb-sql-test/34/ and message: 'Build started sha1 is merged.'
+Setting status of 6b7a33d3b34b7913e0dc7b103c95cfdec5189fde to PENDING with url http://10.15.247.135:8081/job/ghpqb-sql-test/34/ and message: 'Build started sha1 is merged.'
+ビルドします。 ワークスペース: /usr/local/opt/jenkins/jobs/ghpqb-sql-test/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/boyd-mask/git-jenkins-test/ # timeout=10
+Fetching upstream changes from https://github.com/boyd-mask/git-jenkins-test/
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/boyd-mask/git-jenkins-test/ +refs/heads/*:refs/remotes/origin/* +refs/pull/*:refs/remotes/origin/pr/*
+ > git rev-parse refs/remotes/origin/pr/4/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/4/merge^{commit} # timeout=10
+Checking out Revision 15e9285549a339514d28b5188304e76d63fc8d4d (refs/remotes/origin/pr/4/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15e9285549a339514d28b5188304e76d63fc8d4d
+First time build. Skipping changelog.
+[workspace] $ /bin/sh -xe /tmp/hudson5093126375816775146.sh
++ /usr/local/bin/fab -f /usr/local/jenkins/fabfile.py CurrentCommitMessage:oauth_token=6d85708aa08c6d12c6fedab3b600424ada445df3,github_api_url=https://api.github.com,owner=boyd-mask,repo=git-jenkins-test,git_current_branch=origin/pr/4/merge,git_current_commit_id=15e9285549a339514d28b5188304e76d63fc8d4d
+[localhost] local: curl -H "Authorization: token 6d85708aa08c6d12c6fedab3b600424ada445df3" https://api.github.com/repos/boyd-mask/git-jenkins-test/commits/15e9285549a339514d28b5188304e76d63fc8d4d
+Traceback (most recent call last):
+  File "/usr/local/Python-2.7.9/lib/python2.7/site-packages/fabric/main.py", line 743, in main
+    *args, **kwargs
+  File "/usr/local/Python-2.7.9/lib/python2.7/site-packages/fabric/tasks.py", line 405, in execute
+    results['<local-only>'] = task.run(*args, **new_kwargs)
+  File "/usr/local/Python-2.7.9/lib/python2.7/site-packages/fabric/tasks.py", line 171, in run
+    return self.wrapped(*args, **kwargs)
+  File "/usr/local/jenkins/fabfile.py", line 19, in CurrentCommitMessage
+    git_head_commit_id = json.loads(str(commit_raw))['parents'][-1]['sha']
+KeyError: 'parents'
+Build step 'シェルの実行' marked build as failure
+Adding one-line test results to commit status...
+Setting status of 6b7a33d3b34b7913e0dc7b103c95cfdec5189fde to FAILURE with url http://10.15.247.135:8081/job/ghpqb-sql-test/34/ and message: 'FAILED!
+ No test results found.'
+Setting status of 6b7a33d3b34b7913e0dc7b103c95cfdec5189fde to FAILURE with url http://10.15.247.135:8081/job/ghpqb-sql-test/34/ and message: 'failure
+ '
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+ha:AAAApx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZp/az8JP3k/Nzc1LwS3aLU4tKcEt30zJKM0iR9APyWVhPQAAAAcomment-result-github の新規ビルドを実行します
+Finished: FAILURE
+
